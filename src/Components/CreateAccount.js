@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './components.css';
 
 export const CreateAccount=()=> {
     const [accountHolderName, setAccountHolderName] = useState('');
@@ -27,13 +28,17 @@ export const CreateAccount=()=> {
             
 
             if (response.ok) {
-                navigate('/');
+                navigate('/dummyBank/');
             } else {
                 console.error('Failed to create account');
             }
         } catch (error) {
             console.error('Error:', error);
         }
+    };
+    
+    const handleClick=()=>{
+        navigate(`/dummyBank`);
     };
 
     return (
@@ -68,6 +73,7 @@ export const CreateAccount=()=> {
                     />
                 </div>
                 <button type="submit">Create Account</button>
+                <button onClick={handleClick}>Back</button>
             </form>
         </div>
     );

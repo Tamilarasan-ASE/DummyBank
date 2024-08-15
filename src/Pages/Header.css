@@ -1,0 +1,86 @@
+.header {
+    background-color: #2c3e50; /* Dark blue background */
+    color: white; /* White text color */
+    padding: 15px 0; /* Vertical padding */
+    position: fixed; /* Fixed position at the top */
+    width: 100%; /* Full width */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    z-index: 1000; /* Ensure it stays on top */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+}
+
+.container {
+    width: 100%; /* Full width */
+    max-width: 1200px; /* Maximum width for container */
+    margin: 0 auto; /* Center container horizontally */
+    display: flex; /* Flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between elements */
+    position: relative; /* Position relative for absolute positioning of user menu */
+}
+
+.home-button {
+    background-color: #007bff; /* Button background color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    padding: 8px 16px; /* Button padding */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 14px; /* Font size */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column; /* Stack logo and subtitle vertically */
+    align-items: center; /* Center items horizontally */
+    flex: 1; /* Allow logo-container to take available space */
+}
+
+.logo {
+    font-size: 24px; /* Logo font size */
+    margin: 0; /* Remove default margin */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.subtitle {
+    font-size: 13px; /* Subtitle font size */
+    margin: 5px 0 0; /* Margin for spacing */
+}
+
+.user-menu {
+    position: relative; /* Position relative to container */
+}
+
+.user-menu-button {
+    background-color: #007bff; /* Button background color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    padding: 8px 16px; /* Button padding */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 14px; /* Font size */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.user-menu-dropdown {
+    position: absolute; /* Position dropdown absolutely */
+    top: 100%; /* Position below the button */
+    right: 0; /* Align to the right */
+    background-color: #2c3e50; /* Background color */
+    border: 1px solid #2aa8a3; /* Border color */
+    border-radius: 4px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(199, 40, 40, 0.1); /* Shadow for dropdown */
+    min-width: 150px; /* Minimum width */
+    z-index: 1000; /* Ensure dropdown is above other content */
+}
+
+.user-menu-dropdown p {
+    padding: 8px 16px; /* Padding for dropdown items */
+    margin: 0; /* Remove default margin */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.user-menu-dropdown p:hover {
+    background-color: #2b83cb; /* Background color on hover */
+}

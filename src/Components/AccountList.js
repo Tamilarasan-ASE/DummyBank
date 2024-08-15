@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import './components.css';
 
 export const AccountList=()=> {
     const [accounts, setAccounts] = useState([]);
@@ -9,6 +10,9 @@ export const AccountList=()=> {
             .then(response => response.json())
             .then(data => setAccounts(data));
     }, []);
+
+
+    
     
 
     return (
@@ -17,11 +21,11 @@ export const AccountList=()=> {
             <ul>
                 {accounts.map(account => (
                     <li key={account.id}>
-                        <Link to={`/account/${account.id}`}>{account.accountHolderName}</Link>
+                        <Link to={`/dummyBank/account/${account.id}`}>{account.accountHolderName}</Link>
                     </li>
                 ))}
             </ul>
-            <Link to="/create">Create New Account</Link>
+            <Link to="/dummyBank/create">Create New Account</Link>
         </div>
     );
 };

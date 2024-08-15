@@ -1,0 +1,129 @@
+/* General styles for the page */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container styles for all components */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styles (if included in components) */
+h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Create Account styles */
+.create-account {
+    padding: 20px;
+}
+
+.create-account form {
+    display: flex;
+    flex-direction: column;
+}
+
+.create-account div {
+    margin-bottom: 15px;
+}
+
+.create-account label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.create-account input[type="text"],
+.create-account input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.create-account button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.create-account button:hover {
+    background-color: #0056b3;
+}
+
+/* Account Details styles */
+.account-details {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.account-details p {
+    margin: 10px 0;
+}
+
+.account-details button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.account-details button:hover {
+    background-color: #0056b3;
+}
+
+/* Account List styles */
+.account-list {
+    padding: 20px;
+}
+
+.account-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.account-list li {
+    margin-bottom: 10px;
+}
+
+.account-list a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 16px;
+}
+
+.account-list a:hover {
+    text-decoration: underline;
+}
+
+.account-list .create-link {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.account-list .create-link:hover {
+    background-color: #0056b3;
+}
