@@ -23,7 +23,7 @@ const Header = () => {
   };
 
   const handleUserMenuToggle = () => {
-    setIsUserMenuOpen(!isUserMenuOpen); // Toggle user menu visibility
+    setIsUserMenuOpen(!isUserMenuOpen); 
   };
 
   return (
@@ -36,7 +36,7 @@ const Header = () => {
         <h1 className="logo" onClick={handleClick}>
           Dummy Bank
         </h1>
-        <p className="subtitle">Bank for Dummy People</p>
+        <p className="subtitle">Dummy Bank for Dummy People</p>
         </div>
         <div className="user-menu">
           <button onClick={handleUserMenuToggle} className="user-menu-button">

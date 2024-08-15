@@ -25,7 +25,6 @@ export const AccountList=()=> {
                     </li>
                 ))}
             </ul>
-            <Link to="/dummyBank/create">Create New Account</Link>
         </div>
     );
 };

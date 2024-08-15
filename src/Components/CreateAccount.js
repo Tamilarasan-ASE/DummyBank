@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import './components.css';
 
-export const CreateAccount=()=> {
+export const CreateAccount=({setActiveTab})=> {
     const [accountHolderName, setAccountHolderName] = useState('');
     const [accountNumber, setAccountNumber] = useState('');
     const [balance, setBalance] = useState(0.0);
-    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -28,7 +26,7 @@ export const CreateAccount=()=> {
             
 
             if (response.ok) {
-                navigate('/dummyBank/');
+                setActiveTab('accountList');
             } else {
                 console.error('Failed to create account');
             }
@@ -37,9 +35,7 @@ export const CreateAccount=()=> {
         }
     };
     
-    const handleClick=()=>{
-        navigate(`/dummyBank`);
-    };
+   
 
     return (
         <div>
@@ -73,7 +69,7 @@ export const CreateAccount=()=> {
                     />
                 </div>
                 <button type="submit">Create Account</button>
-                <button onClick={handleClick}>Back</button>
+                
             </form>
         </div>
     );
