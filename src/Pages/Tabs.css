@@ -8,15 +8,15 @@
     border-top: 1px solid #ddd;
 }
 .tabs div {
-    flex: 1; /* Make tabs take up equal space */
-    display: flex; /* Align content within the tab */
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
+    flex: 1; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
     cursor: pointer;
-    padding: 5px 0; /* Adjust padding to ensure box appearance */
+    padding: 5px 0; 
     font-size: 16px;
     transition: background-color 0.3s, color 0.3s;
-    text-align: center; /* Center text within the tab */
+    text-align: center; 
 }
 
 .active {

@@ -1,30 +1,4 @@
-/* General Styles */
-body {
-    margin: 0; /* Remove default body margin */
-    padding: 0;
-}
 
-.header {
-    background-color: #2c3e50;
-    color: white;
-    padding: 15px;
-    text-align: center;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    height: 60px; /* Adjust based on actual header height */
-}
-
-.content {
-    padding-top: 60px; /* This should match the header height */
-}
-
-.tab-container {
-    padding: 20px; /* Add some padding around tabs */
-}
-
-/* Create Account styles */
 .create-account {
     padding: 20px;
 }
@@ -49,6 +23,7 @@ body {
     padding: 8px;
     border: 1px solid #ddd;
     border-radius: 4px;
+    
 }
 
 .create-account button {
@@ -59,11 +34,11 @@ body {
     cursor: pointer;
     font-size: 14px;
     border-radius: 4px;
-    margin-right: 10px;
+    width: 100%;
 }
 
 .create-account button:hover {
-    background-color: #0056b3;
+    background-color: #0574eb;
 }
 
 /* Account Details styles */
@@ -72,6 +47,7 @@ body {
     border: 1px solid #ddd;
     border-radius: 8px;
     background-color: #f9f9f9;
+    margin-top: 20px;
 }
 
 .account-details p {
@@ -92,41 +68,57 @@ body {
     background-color: #0056b3;
 }
 
-/* Account List styles */
 .account-list {
+    padding: 10px;
+}
+
+
+/* General container for the cards */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+/* Individual card styling */
+.card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
     padding: 20px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
 }
 
-.account-list ul {
-    list-style-type: none;
-    padding: 0;
+.card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.account-list li {
-    margin-bottom: 10px;
-}
-
-.account-list a {
-    text-decoration: none;
+.card h3 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
     color: #007bff;
-    font-size: 16px;
 }
 
-.account-list a:hover {
-    text-decoration: underline;
+.card p {
+    margin: 5px 0;
+    font-size: 1em;
 }
 
-.account-list .create-link {
+.details-link {
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 15px;
+    padding: 10px 20px;
     background-color: #007bff;
     color: white;
-    padding: 10px 20px;
-    border-radius: 4px;
     text-decoration: none;
+    border-radius: 4px;
     font-size: 14px;
 }
 
-.account-list .create-link:hover {
+.details-link:hover {
     background-color: #0056b3;
 }
+

@@ -8,7 +8,8 @@
     left: 0; /* Align to the left */
     z-index: 1000; /* Ensure it stays on top */
     display: flex; /* Use flexbox for layout */
-    align-items: center; /* Center items vertically */
+    align-items: center; 
+    height: 50px;
 }
 
 .container {
@@ -80,7 +81,11 @@
     margin: 0; /* Remove default margin */
     cursor: pointer; /* Pointer cursor on hover */
 }
-
-.user-menu-dropdown p:hover {
-    background-color: #f1f1f1; /* Background color on hover */
+.logout:hover {
+    background-color: #d12020; /* Background color on hover */
 }
+
+.drops:hover {
+    background-color: #007bff; /* Background color on hover */
+}
+

@@ -23,7 +23,7 @@ export const AccountDetails=()=> {
     };
     
     return (
-        <div>
+        <div className='account-details'>
             <h2>Account Details</h2>
             <p><strong>Account Holder Name:</strong> {account.accountHolderName}</p>
             <p><strong>Account Number:</strong> {account.accountNumber}</p>

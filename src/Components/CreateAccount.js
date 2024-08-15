@@ -38,7 +38,7 @@ export const CreateAccount=({setActiveTab})=> {
    
 
     return (
-        <div>
+        <div className='create-account'>
             <h2>Create New Bank Account</h2>
             <form onSubmit={handleSubmit}>
                 <div>

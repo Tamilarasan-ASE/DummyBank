@@ -44,9 +44,9 @@ const Header = () => {
           </button>
           {isUserMenuOpen && (
             <div className="user-menu-dropdown">
-              <p onClick={handleAdmin}>Admin</p>
-              <p onClick={handleUser}>User</p>
-              <p onClick={handleLogOut}>LogOut</p>
+              <p className='drops' onClick={handleAdmin}>Admin</p>
+              <p className='drops' onClick={handleUser}>User</p>
+              <p className='logout' onClick={handleLogOut}>LogOut</p>
             </div>
           )}
         </div>
