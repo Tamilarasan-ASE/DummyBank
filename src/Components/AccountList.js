@@ -4,18 +4,56 @@ import './components.css';
 
 export const AccountList = () => {
     const [accounts, setAccounts] = useState([]);
+    const [filteredAccounts, setFilteredAccounts] = useState([]);
+    const [filterCriteria, setFilterCriteria] = useState('accountNumber');
+    const [searchTerm, setSearchTerm] = useState('');
 
     useEffect(() => {
         fetch('http://localhost:8080/dummyBank')
             .then(response => response.json())
-            .then(data => setAccounts(data));
+            .then(data => {
+                setAccounts(data);
+                setFilteredAccounts(data);
+            });
     }, []);
+
+    useEffect(() => {
+        if (searchTerm) {
+            setFilteredAccounts(accounts.filter(account => {
+                if (filterCriteria === 'accountNumber') {
+                    return account.accountNumber.includes(searchTerm);
+                } else if (filterCriteria === 'accountHolderName') {
+                    return account.accountHolderName.toLowerCase().includes(searchTerm.toLowerCase());
+                }
+                return false;
+            }));
+        } else {
+            setFilteredAccounts(accounts);
+        }
+    }, [searchTerm, filterCriteria, accounts]);
 
     return (
         <div className='account-list'>
-            <h2>Bank Accounts</h2>
+            <div className="header-container">
+                <h2>Account Lists</h2>
+                <div className="filter-container">
+                    <select 
+                        value={filterCriteria}
+                        onChange={(e) => setFilterCriteria(e.target.value)}
+                    >
+                        <option value="accountNumber">Account Number</option>
+                        <option value="accountHolderName">Account Holder Name</option>
+                    </select>
+                    <input 
+                        type="text" 
+                        placeholder={`Search by ${filterCriteria === 'accountNumber' ? 'Account Number' : 'Account Holder Name'}`} 
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                    />
+                </div>
+            </div>
             <div className="card-container">
-                {accounts.map(account => (
+                {filteredAccounts.map(account => (
                     <div key={account.id} className="card">
                         <h3>{account.accountHolderName}</h3>
                         <p>Account Number: {account.accountNumber}</p>

@@ -7,6 +7,7 @@ import Header from './Pages/Header';
 import Tabs from './Pages/Tabs';
 import { AccountDetails } from './Components/AccountDetails';
 import './App.css';
+import { EditPage } from './Components/EditPage';
 
 const App = () => {
     const [activeTab, setActiveTab] = useState('accountList');
@@ -25,6 +26,8 @@ const App = () => {
                             {activeTab === 'createAccount' && <CreateAccount setActiveTab={setActiveTab} />}
                         </div>
                     } />
+                    <Route path="/dummyBank/edit/:id" element={<EditPage/> } />
+
                     <Route path="/dummyBank/account/:id" element={<AccountDetails/>}/>
                 </Routes>
                 </div>
